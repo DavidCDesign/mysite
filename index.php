@@ -457,7 +457,7 @@ $activeNav = 'home';
                         <div class="g-recaptcha" data-sitekey="6LcaiEMsAAAAAL2ostR2zh-wY0C1RJHR346hyYBd" data-action="contact"></div>
                         
                         <div class="form-submit">
-                            <button type="submit">Send Message</button>
+                            <button type="submit" class="btn">Send Message</button>
                         </div>
                     </form>
                 </div>
