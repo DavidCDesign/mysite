@@ -18,7 +18,7 @@ $activeNav = 'home';
         
         <div class="hero-content">
             <h1 class="hero-title animate-fade-in-up">
-                <em></em> design
+                <em>Functional</em> design
                 <span class="line-2">proven <em>success</em></span>
             </h1>
             
