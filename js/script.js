@@ -159,6 +159,8 @@ contactForm.addEventListener('submit', (e) => {
 
 // EmailJS Setup
 function sendEmail() {
+    const captchaResponse = grecaptcha.getResponse();
+    
     let params = {
         first_name: document.getElementById("firstName").value,
         last_name: document.getElementById("lastName").value,
@@ -166,13 +168,20 @@ function sendEmail() {
         service: document.getElementById("service").value,
         budget: document.getElementById("budget").value,
         message: document.getElementById("message").value,
+        'g-recaptcha-response': captchaResponse
     }; 
-    emailjs.send("service_f0vhv3f","template_b27262m", params).then(function(res){
+    
+    console.log("Sending email with params:", params);
+    
+    emailjs.send("service_f0vhv3f", "template_b27262m", params).then(function(res){
+        console.log("Email sent successfully:", res);
         alert("We will reach out to you shortly. Thank you!");
         document.getElementById('contactForm').reset();
         grecaptcha.reset(); // Reset reCAPTCHA after successful submission
     }).catch(function(error) {
+        console.error("EmailJS error details:", error);
+        console.error("Error status:", error.status);
+        console.error("Error text:", error.text);
         alert("There was an error sending your message. Please try again.");
-        console.error("EmailJS error:", error);
     });
 }
