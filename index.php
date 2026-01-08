@@ -152,6 +152,58 @@ $activeNav = 'home';
     </section>
 
     <!-- ========================================
+         SERVICES SECTION
+    ======================================== -->
+    <section class="section" id="services" style="background: var(--color-bg-secondary);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Services I <em>Offer</em></h2>
+                <p class="section-subtitle">
+                    End-to-end solutions tailored to your specific needs and goals.
+                </p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-number">01</div>
+                    <h3>Web Design & Development</h3>
+                    <p>Custom websites that look stunning and perform flawlessly across all devices.</p>
+                    <div class="service-features">
+                        <span class="service-feature">Responsive Design</span>
+                        <span class="service-feature">CMS Integration</span>
+                        <span class="service-feature">SEO Optimization</span>
+                        <span class="service-feature">Performance Tuning</span>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-number">02</div>
+                    <h3>UI/UX Design</h3>
+                    <p>User-centered design that creates meaningful and memorable experiences.</p>
+                    <div class="service-features">
+                        <span class="service-feature">User Research</span>
+                        <span class="service-feature">Wireframing</span>
+                        <span class="service-feature">Prototyping</span>
+                        <span class="service-feature">Usability Testing</span>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-number">03</div>
+                    <h3>Brand Identity</h3>
+                    <p>Comprehensive branding solutions that tell your story and connect with your audience.</p>
+                    <div class="service-features">
+                        <span class="service-feature">Logo Design</span>
+                        <span class="service-feature">Brand Guidelines</span>
+                        <span class="service-feature">Visual Identity</span>
+                        <span class="service-feature">Marketing Materials</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
          PORTFOLIO SECTION
     ======================================== -->
     <section class="section" id="portfolio">
@@ -258,58 +310,6 @@ $activeNav = 'home';
                 </div>
                 
 
-            </div>
-        </div>
-    </section>
-
-    <!-- ========================================
-         SERVICES SECTION
-    ======================================== -->
-    <section class="section" id="services" style="background: var(--color-bg-secondary);">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Services I <em>Offer</em></h2>
-                <p class="section-subtitle">
-                    End-to-end solutions tailored to your specific needs and goals.
-                </p>
-            </div>
-            
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-number">01</div>
-                    <h3>Web Design & Development</h3>
-                    <p>Custom websites that look stunning and perform flawlessly across all devices.</p>
-                    <div class="service-features">
-                        <span class="service-feature">Responsive Design</span>
-                        <span class="service-feature">CMS Integration</span>
-                        <span class="service-feature">SEO Optimization</span>
-                        <span class="service-feature">Performance Tuning</span>
-                    </div>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-number">02</div>
-                    <h3>UI/UX Design</h3>
-                    <p>User-centered design that creates meaningful and memorable experiences.</p>
-                    <div class="service-features">
-                        <span class="service-feature">User Research</span>
-                        <span class="service-feature">Wireframing</span>
-                        <span class="service-feature">Prototyping</span>
-                        <span class="service-feature">Usability Testing</span>
-                    </div>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-number">03</div>
-                    <h3>Brand Identity</h3>
-                    <p>Comprehensive branding solutions that tell your story and connect with your audience.</p>
-                    <div class="service-features">
-                        <span class="service-feature">Logo Design</span>
-                        <span class="service-feature">Brand Guidelines</span>
-                        <span class="service-feature">Visual Identity</span>
-                        <span class="service-feature">Marketing Materials</span>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
