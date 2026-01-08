@@ -167,13 +167,15 @@ function sendEmail() {
         email: document.getElementById("email").value,  
         service: document.getElementById("service").value,
         budget: document.getElementById("budget").value,
-        message: document.getElementById("message").value,
-        'g-recaptcha-response': captchaResponse
+        message: document.getElementById("message").value
     }; 
     
     console.log("Sending email with params:", params);
     
-    emailjs.send("service_f0vhv3f", "template_b27262m", params).then(function(res){
+    emailjs.send("service_f0vhv3f", "template_b27262m", params, {
+        publicKey: "Eg_ZIU4sjExi_cNVj",
+        recaptchaToken: captchaResponse
+    }).then(function(res){
         console.log("Email sent successfully:", res);
         alert("We will reach out to you shortly. Thank you!");
         document.getElementById('contactForm').reset();
