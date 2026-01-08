@@ -64,7 +64,6 @@ if (!isset($additionalScripts)) {
 
     <!-- JavaScript -->
     <script src="https://www.google.com/recaptcha/api.js"></script>
-    <script src="<?php echo url('/js/script.js'); ?>"></script>
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
@@ -74,10 +73,8 @@ if (!isset($additionalScripts)) {
             publicKey: "Eg_ZIU4sjExi_cNVj",
         });
     })();
-        function onSubmit(token) {
-            document.getElementById("contactForm").submit();
-        }
     </script>
+    <script src="<?php echo url('/js/script.js'); ?>"></script>
     <?php foreach ($additionalScripts as $script): ?>
         <script src="<?php echo url($script); ?>"></script>
     <?php endforeach; ?>
