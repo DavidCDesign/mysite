@@ -138,38 +138,24 @@ const contactForm = document.getElementById('contactForm');
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const captchaResponse = grecaptcha.getResponse();
-
-    if (!captchaResponse.length > 0) {
-        throw new Error('reCAPTCHA validation failed. Please try again.');
-    }
-
-    fetch()
-
-    // Get form data
-    const formData = new FormData(contactForm);
-
-    // Here you would typically send the data to a server
-    // For now, we'll just show a success message
-    alert('Thank you for your message! I\'ll get back to you soon.');
-    contactForm.reset();
-
     // Validate form
-    if (contactForm.checkValidity()) {
-        // If form is valid, trigger reCAPTCHA
-        // reCAPTCHA will call onSubmit when validated
-        grecaptcha.execute();
-    } else {
+    if (!contactForm.checkValidity()) {
         // Show validation errors
         contactForm.reportValidity();
+        return;
     }
-});
 
-// reCAPTCHA callback function
-function onSubmit(token) {
-    // This function is called after reCAPTCHA validation
+    // Check reCAPTCHA response
+    const captchaResponse = grecaptcha.getResponse();
+
+    if (captchaResponse.length === 0) {
+        alert('Please complete the reCAPTCHA verification.');
+        return;
+    }
+
+    // If form is valid and captcha is completed, send email
     sendEmail();
-}
+});
 
 // EmailJS Setup
 function sendEmail() {
@@ -184,6 +170,7 @@ function sendEmail() {
     emailjs.send("service_f0vhv3f","template_b27262m", params).then(function(res){
         alert("Your message has been sent successfully!");
         document.getElementById('contactForm').reset();
+        grecaptcha.reset(); // Reset reCAPTCHA after successful submission
     }).catch(function(error) {
         alert("There was an error sending your message. Please try again.");
         console.error("EmailJS error:", error);
