@@ -175,19 +175,3 @@ function sendEmail() {
         console.error("EmailJS error:", error);
     });
 }
-
-// function sendEmail() {
-    
-//     emailjs.sendForm("service_f0vhv3f", "template_b27262m", "#contactForm")
-//         .then(function(res){
-//             console.log("Email sent successfully:", res);
-//             alert("We will reach out to you shortly. Thank you!");
-//             document.getElementById('contactForm').reset();
-//             grecaptcha.reset(); // Reset reCAPTCHA after successful submission
-//         }).catch(function(error) {
-//             console.error("EmailJS error details:", error);
-//             console.error("Error status:", error.status);
-//             console.error("Error text:", error.text);
-//             alert("There was an error sending your message. Please try again.");
-//         });
-// }
