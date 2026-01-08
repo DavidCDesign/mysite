@@ -168,7 +168,7 @@ function sendEmail() {
         message: document.getElementById("message").value,
     }; 
     emailjs.send("service_f0vhv3f","template_b27262m", params).then(function(res){
-        alert("Your message has been sent successfully!");
+        alert("We will reach out to you shortly. Thank you!");
         document.getElementById('contactForm').reset();
         grecaptcha.reset(); // Reset reCAPTCHA after successful submission
     }).catch(function(error) {

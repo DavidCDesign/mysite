@@ -69,14 +69,14 @@ if (!isset($additionalScripts)) {
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
     <script type="text/javascript">
-    function(){
+    (function(){
         emailjs.init({
             publicKey: "Eg_ZIU4sjExi_cNVj",
         });
-    }();
-    function onSubmit(token) {
-          document.getElementById("contactForm").submit();
-    }
+    })();
+        function onSubmit(token) {
+            document.getElementById("contactForm").submit();
+        }
     </script>
     <?php foreach ($additionalScripts as $script): ?>
         <script src="<?php echo url($script); ?>"></script>
