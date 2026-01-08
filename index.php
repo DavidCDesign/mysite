@@ -454,7 +454,8 @@ $activeNav = 'home';
                             <textarea id="message" name="message" class="form-textarea" placeholder="Tell me about your project..." required></textarea>
                         </div>
 
-                        <div class="g-recaptcha" data-sitekey="6LcaiEMsAAAAAL2ostR2zh-wY0C1RJHR346hyYBd" data-action="contact"></div>
+                        <!-- Honeypot field - hidden from users, bots will fill it -->
+                        <input type="text" name="website" id="website" style="position: absolute; left: -9999px; width: 1px; height: 1px;" tabindex="-1" autocomplete="off">
                         
                         <div class="form-submit">
                             <button type="submit" class="btn">Send Message</button>

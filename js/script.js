@@ -138,40 +138,31 @@ const contactForm = document.getElementById('contactForm');
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
+    // Honeypot check - if filled, it's a bot
+    const honeypot = document.getElementById('website');
+    if (honeypot.value !== '') {
+        console.log('Bot detected via honeypot');
+        return; // Silently reject without alerting the bot
+    }
+
     // Validate form
     if (!contactForm.checkValidity()) {
-        // Show validation errors
         contactForm.reportValidity();
         return;
     }
 
-    // Check reCAPTCHA response
-    const captchaResponse = grecaptcha.getResponse();
-
-    if (captchaResponse.length === 0) {
-        alert('Please complete the reCAPTCHA verification.');
-        return;
-    }
-
-    // If form is valid and captcha is completed, send email
+    // Send email
     sendEmail();
 });
 
 // EmailJS Setup
 function sendEmail() {
-    let params = {
-        first_name: document.getElementById("firstName").value,
-        last_name: document.getElementById("lastName").value,
-        email: document.getElementById("email").value,  
-        service: document.getElementById("service").value,
-        budget: document.getElementById("budget").value,
-        message: document.getElementById("message").value,
-    }; 
-    emailjs.send("service_f0vhv3f","template_b27262m", params).then(function(res){
-        alert("Your message has been sent successfully!");
-        document.getElementById('contactForm').reset();
-    }).catch(function(error) {
-        alert("There was an error sending your message. Please try again.");
-        console.error("EmailJS error:", error);
-    });
+    emailjs.sendForm("service_f0vhv3f", "template_b27262m", "#contactForm")
+        .then(function(res){
+            alert("Your message has been sent successfully!");
+            document.getElementById('contactForm').reset();
+        }).catch(function(error) {
+            alert("There was an error sending your message. Please try again.");
+            console.error("EmailJS error:", error);
+        });
 }
