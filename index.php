@@ -317,7 +317,7 @@ $activeNav = 'home';
     <!-- ========================================
          TESTIMONIALS SECTION
     ======================================== -->
-    <section class="section">
+    <!-- <section class="section">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Client <em>Testimonials</em></h2>
@@ -376,7 +376,7 @@ $activeNav = 'home';
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- ========================================
          CONTACT SECTION
