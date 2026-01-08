@@ -413,22 +413,22 @@ $activeNav = 'home';
                         <div class="form-row">
                             <div class="form-group">
                                 <label class="form-label" for="firstName">First Name</label>
-                                <input type="text" id="firstName" class="form-input" placeholder="John" required>
+                                <input type="text" id="firstName" name="first_name" class="form-input" placeholder="John" required>
                             </div>
                             <div class="form-group">
                                 <label class="form-label" for="lastName">Last Name</label>
-                                <input type="text" id="lastName" class="form-input" placeholder="Doe" required>
+                                <input type="text" id="lastName" name="last_name" class="form-input" placeholder="Doe" required>
                             </div>
                         </div>
                         
                         <div class="form-group">
                             <label class="form-label" for="email">Email Address</label>
-                            <input type="email" id="email" class="form-input" placeholder="john@example.com" required>
+                            <input type="email" id="email" name="email" class="form-input" placeholder="john@example.com" required>
                         </div>
                         
                         <div class="form-group">
                             <label class="form-label" for="service">Service Interested In</label>
-                            <select id="service" class="form-select" required>
+                            <select id="service" name="service" class="form-select" required>
                                 <option value="" disabled selected>Select a service</option>
                                 <option value="web-design">Web Design & Development</option>
                                 <option value="ui-ux">UI/UX Design</option>
@@ -440,7 +440,7 @@ $activeNav = 'home';
                         
                         <div class="form-group">
                             <label class="form-label" for="budget">Budget Range</label>
-                            <select id="budget" class="form-select">
+                            <select id="budget" name="budget" class="form-select">
                                 <option value="" disabled selected>Select budget range</option>
                                 <option value="5k-10k">$500 - $1000</option>
                                 <option value="10k-25k">$1000 - $2500</option>
@@ -451,7 +451,7 @@ $activeNav = 'home';
                         
                         <div class="form-group">
                             <label class="form-label" for="message">Project Details</label>
-                            <textarea id="message" class="form-textarea" placeholder="Tell me about your project..." required></textarea>
+                            <textarea id="message" name="message" class="form-textarea" placeholder="Tell me about your project..." required></textarea>
                         </div>
 
                         <div class="g-recaptcha" data-sitekey="6LcaiEMsAAAAAL2ostR2zh-wY0C1RJHR346hyYBd" data-action="contact"></div>
